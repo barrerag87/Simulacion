@@ -1,0 +1,629 @@
+<!DOCTYPE html><html><head>
+      <title>simmer1</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="file:///c:\Users\rodri\.vscode\extensions\shd101wyy.markdown-preview-enhanced-0.8.13\crossnote\dependencies\katex\katex.min.css">
+      
+      
+      
+      
+      
+      <style>
+      code[class*=language-],pre[class*=language-]{color:#333;background:0 0;font-family:Consolas,"Liberation Mono",Menlo,Courier,monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.4;-moz-tab-size:8;-o-tab-size:8;tab-size:8;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none}pre[class*=language-]{padding:.8em;overflow:auto;border-radius:3px;background:#f5f5f5}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal;background:#f5f5f5}.token.blockquote,.token.comment{color:#969896}.token.cdata{color:#183691}.token.doctype,.token.macro.property,.token.punctuation,.token.variable{color:#333}.token.builtin,.token.important,.token.keyword,.token.operator,.token.rule{color:#a71d5d}.token.attr-value,.token.regex,.token.string,.token.url{color:#183691}.token.atrule,.token.boolean,.token.code,.token.command,.token.constant,.token.entity,.token.number,.token.property,.token.symbol{color:#0086b3}.token.prolog,.token.selector,.token.tag{color:#63a35c}.token.attr-name,.token.class,.token.class-name,.token.function,.token.id,.token.namespace,.token.pseudo-class,.token.pseudo-element,.token.url-reference .token.variable{color:#795da3}.token.entity{cursor:help}.token.title,.token.title .token.punctuation{font-weight:700;color:#1d3e81}.token.list{color:#ed6a43}.token.inserted{background-color:#eaffea;color:#55a532}.token.deleted{background-color:#ffecec;color:#bd2c00}.token.bold{font-weight:700}.token.italic{font-style:italic}.language-json .token.property{color:#183691}.language-markup .token.tag .token.punctuation{color:#333}.language-css .token.function,code.language-css{color:#0086b3}.language-yaml .token.atrule{color:#63a35c}code.language-yaml{color:#183691}.language-ruby .token.function{color:#333}.language-markdown .token.url{color:#795da3}.language-makefile .token.symbol{color:#795da3}.language-makefile .token.variable{color:#183691}.language-makefile .token.builtin{color:#0086b3}.language-bash .token.keyword{color:#0086b3}pre[data-line]{position:relative;padding:1em 0 1em 3em}pre[data-line] .line-highlight-wrapper{position:absolute;top:0;left:0;background-color:transparent;display:block;width:100%}pre[data-line] .line-highlight{position:absolute;left:0;right:0;padding:inherit 0;margin-top:1em;background:hsla(24,20%,50%,.08);background:linear-gradient(to right,hsla(24,20%,50%,.1) 70%,hsla(24,20%,50%,0));pointer-events:none;line-height:inherit;white-space:pre}pre[data-line] .line-highlight:before,pre[data-line] .line-highlight[data-end]:after{content:attr(data-start);position:absolute;top:.4em;left:.6em;min-width:1em;padding:0 .5em;background-color:hsla(24,20%,50%,.4);color:#f4f1ef;font:bold 65%/1.5 sans-serif;text-align:center;vertical-align:.3em;border-radius:999px;text-shadow:none;box-shadow:0 1px #fff}pre[data-line] .line-highlight[data-end]:after{content:attr(data-end);top:auto;bottom:.4em}html body{font-family:'Helvetica Neue',Helvetica,'Segoe UI',Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ol,html body>ul{margin-bottom:16px}html body ol,html body ul{padding-left:2em}html body ol.no-list,html body ul.no-list{padding:0;list-style-type:none}html body ol ol,html body ol ul,html body ul ol,html body ul ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:700;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:700}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::after,html body code::before{letter-spacing:-.2em;content:'\00a0'}html body pre>code{padding:0;margin:0;word-break:normal;white-space:pre;background:0 0;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:after,html body pre code:before,html body pre tt:after,html body pre tt:before{content:normal}html body blockquote,html body dl,html body ol,html body p,html body pre,html body ul{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body code,html body pre{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview ul{list-style:disc}.markdown-preview ul ul{list-style:circle}.markdown-preview ul ul ul{list-style:square}.markdown-preview ol{list-style:decimal}.markdown-preview ol ol,.markdown-preview ul ol{list-style-type:lower-roman}.markdown-preview ol ol ol,.markdown-preview ol ul ol,.markdown-preview ul ol ol,.markdown-preview ul ul ol{list-style-type:lower-alpha}.markdown-preview .newpage,.markdown-preview .pagebreak{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center!important}.markdown-preview:not([data-for=preview]) .code-chunk .code-chunk-btn-group{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .status{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .output-div{margin-bottom:16px}.markdown-preview .md-toc{padding:0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link div,.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}.markdown-preview .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0;min-height:100vh}@media screen and (min-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{font-size:14px!important;padding:1em}}@media print{html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc{padding:0 16px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link div,html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% - 300px);padding:2em calc(50% - 457px - 300px / 2);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+      </style>
+      <!-- The content below will be included at the end of the <head> element. --><script type="text/javascript">
+  document.addEventListener("DOMContentLoaded", function () {
+    // your code here
+  });
+</script></head><body for="html-export">
+    
+    
+      <div class="crossnote markdown-preview  ">
+      
+<p>Este documento es una traducción de <a href="https://r-simmer.org/articles/simmer-04-bank-1.html">https://r-simmer.org/articles/simmer-04-bank-1.html</a></p>
+<h1 id="introducción">Introducción </h1>
+<p>Este tutorial está adaptado de un tutorial para el paquete de Python 2 ‘SimPy’. Los usuarios familiarizados con SimPy pueden encontrar este tutorial útil para la transición a <code>simmer</code>.</p>
+<h2 id="un-solo-cliente">Un solo cliente </h2>
+<p>En este tutorial modelamos un banco simple con clientes que llegan al azar. Desarrollamos el modelo paso a paso, comenzando de manera simple y produciendo un programa en ejecución en cada etapa.</p>
+<p>Una simulación siempre debe desarrollarse para responder a una pregunta específica; en estos modelos investigamos cómo cambiar el número de servidores o cajeros del banco podría afectar el tiempo de espera de los clientes.</p>
+<h2 id="un-cliente-que-llega-a-una-hora-fija">Un cliente que llega a una hora fija </h2>
+<p>Primero modelamos un solo cliente que llega al banco para una visita, mira la decoración por un tiempo y luego se va. No hay cola. Primero asumiremos que su hora de llegada y el tiempo que pasa en el banco son fijos.</p>
+<p>La hora de llegada se fija en 5, y el tiempo que pasa en el banco se fija en 10. Interpretamos ‘5’ y ‘10’ como ‘5 minutos’ y ‘10 minutos’. La simulación se ejecuta por un máximo de 100 minutos, o hasta que todos los clientes generados completen sus trayectorias.</p>
+<p>Nota dónde aparecen estas constantes en el siguiente código.</p>
+<pre data-role="codeBlock" data-info="r" class="language-r r"><code>library<span class="token punctuation">(</span>simmer<span class="token punctuation">)</span>
+
+customer <span class="token operator">&lt;-</span>
+  trajectory<span class="token punctuation">(</span><span class="token string">"Customer's path"</span><span class="token punctuation">)</span> <span class="token percent-operator operator">%&gt;%</span>
+  log_<span class="token punctuation">(</span><span class="token string">"Here I am"</span><span class="token punctuation">)</span> <span class="token percent-operator operator">%&gt;%</span>
+  timeout<span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span> <span class="token percent-operator operator">%&gt;%</span>
+  log_<span class="token punctuation">(</span><span class="token string">"I must leave"</span><span class="token punctuation">)</span>
+
+bank <span class="token operator">&lt;-</span>
+  simmer<span class="token punctuation">(</span><span class="token string">"bank"</span><span class="token punctuation">)</span> <span class="token percent-operator operator">%&gt;%</span>
+  add_generator<span class="token punctuation">(</span><span class="token string">"Customer"</span><span class="token punctuation">,</span> customer<span class="token punctuation">,</span> at<span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+bank <span class="token percent-operator operator">%&gt;%</span> run<span class="token punctuation">(</span>until <span class="token operator">=</span> <span class="token number">100</span><span class="token punctuation">)</span>
+<span class="token comment">#&gt; 5: Customer0: Here I am</span>
+<span class="token comment">#&gt; 15: Customer0: I must leave</span>
+<span class="token comment">#&gt; simmer environment: bank | now: 15 | next: </span>
+<span class="token comment">#&gt; { Monitor: in memory }</span>
+<span class="token comment">#&gt; { Source: Customer | monitored: 1 | n_generated: 1 }</span>
+bank <span class="token percent-operator operator">%&gt;%</span> get_mon_arrivals<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token comment">#&gt;        name start_time end_time activity_time finished replication</span>
+<span class="token comment">#&gt; 1 Customer0          5       15            10     TRUE           1</span>
+</code></pre><p>El breve rastro impreso por la función <code>get_mon_arrivals</code> muestra el resultado. El programa termina en el tiempo de simulación 15 porque no hay más eventos por ejecutar. Al final de la visita, el cliente no tiene más acciones y no hay otros objetos o clientes activos.</p>
+<h2 id="un-cliente-que-llega-al-azar">Un cliente que llega al azar </h2>
+<p>Ahora extendemos el modelo para permitir que nuestro cliente llegue en un momento simulado aleatorio, aunque mantendremos el tiempo en el banco en 10, como antes.</p>
+<p>El cambio ocurre en los argumentos de la función <code>add_generator</code>. La función <code>rexp</code> dibuja de una distribución exponencial con el parámetro dado, que en este caso es 1/5. Vea <code>?rexp</code> para más detalles. También sembramos el generador de números aleatorios con 10211 para que la misma secuencia de números aleatorios se dibuje cada vez que se ejecuta el script.</p>
+<pre data-role="codeBlock" data-info="r" class="language-r r"><code>library<span class="token punctuation">(</span>simmer<span class="token punctuation">)</span>
+
+set.seed<span class="token punctuation">(</span><span class="token number">10212</span><span class="token punctuation">)</span>
+
+customer <span class="token operator">&lt;-</span>
+  trajectory<span class="token punctuation">(</span><span class="token string">"Customer's path"</span><span class="token punctuation">)</span> <span class="token percent-operator operator">%&gt;%</span>
+  log_<span class="token punctuation">(</span><span class="token string">"Here I am"</span><span class="token punctuation">)</span> <span class="token percent-operator operator">%&gt;%</span>
+  timeout<span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span> <span class="token percent-operator operator">%&gt;%</span>
+  log_<span class="token punctuation">(</span><span class="token string">"I must leave"</span><span class="token punctuation">)</span>
+
+bank <span class="token operator">&lt;-</span>
+  simmer<span class="token punctuation">(</span><span class="token string">"bank"</span><span class="token punctuation">)</span> <span class="token percent-operator operator">%&gt;%</span>
+  add_generator<span class="token punctuation">(</span><span class="token string">"Customer"</span><span class="token punctuation">,</span> customer<span class="token punctuation">,</span> at<span class="token punctuation">(</span>rexp<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token operator">/</span><span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+bank <span class="token percent-operator operator">%&gt;%</span> run<span class="token punctuation">(</span>until <span class="token operator">=</span> <span class="token number">100</span><span class="token punctuation">)</span>
+<span class="token comment">#&gt; 7.8393: Customer0: Here I am</span>
+<span class="token comment">#&gt; 17.8393: Customer0: I must leave</span>
+<span class="token comment">#&gt; simmer environment: bank | now: 17.8393046225526 | next: </span>
+<span class="token comment">#&gt; { Monitor: in memory }</span>
+<span class="token comment">#&gt; { Source: Customer | monitored: 1 | n_generated: 1 }</span>
+bank <span class="token percent-operator operator">%&gt;%</span> get_mon_arrivals<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token comment">#&gt;        name start_time end_time activity_time finished replication</span>
+<span class="token comment">#&gt; 1 Customer0   7.839305  17.8393            10     TRUE           1</span>
+</code></pre><p>El rastro muestra que el cliente ahora llega a la hora 7.839305. Cambiar el valor de la semilla cambiaría ese tiempo.</p>
+<h2 id="más-clientes">Más clientes </h2>
+<p>Nuestra simulación hace poco hasta ahora. Para considerar una simulación con varios clientes, volvemos al modelo determinista simple y agregamos más clientes.</p>
+<p>El programa es casi tan fácil como el primer ejemplo (Un cliente que llega a una hora fija). El cambio principal está en la función <code>add_generator</code>, donde generamos tres clientes definiendo tres horas de inicio. También aumentamos el tiempo máximo de simulación a 400 en la función <code>run</code>. Observe que solo necesitamos una definición de la trayectoria del cliente y generar varios clientes que sigan esa trayectoria. Estos clientes actúan de manera bastante independiente en este modelo.</p>
+<p>Cada cliente también permanece en el banco por un tiempo diferente, pero no aleatorio. Este es un caso inusual, por lo que requiere un poco de código R inusual. La función <code>timeout</code> acepta ya sea un tiempo de espera constante o una función que se llama una vez por cliente y devuelve un solo valor (por ejemplo, <code>rexp(1, 1/10)</code>). Por lo tanto, necesitamos crear una función que devuelva un valor diferente pero específico cada vez que se llame. Definimos una función llamada <code>loop</code> para hacer esto. La función <code>loop</code> devuelve otra función. En el ejemplo, almacenamos esa función bajo el nombre <code>x</code>. Cuando se llama, la función <code>x</code> devuelve uno de (en el ejemplo) 7, 10 y 20, en secuencia, volviendo a empezar cuando se llama por cuarta vez.</p>
+<pre data-role="codeBlock" data-info="r" class="language-r r"><code><span class="token comment"># Function to specify a series of waiting times, that loop around</span>
+loop <span class="token operator">&lt;-</span> <span class="token keyword keyword-function">function</span><span class="token punctuation">(</span><span class="token ellipsis">...</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    time_diffs <span class="token operator">&lt;-</span> c<span class="token punctuation">(</span><span class="token ellipsis">...</span><span class="token punctuation">)</span>
+    i <span class="token operator">&lt;-</span> <span class="token number">0</span>
+    <span class="token keyword keyword-function">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword keyword-if">if</span> <span class="token punctuation">(</span>i <span class="token operator">&lt;</span> length<span class="token punctuation">(</span>time_diffs<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        i <span class="token operator">&lt;&lt;-</span> i<span class="token operator">+</span><span class="token number">1</span>
+      <span class="token punctuation">}</span> <span class="token keyword keyword-else">else</span> <span class="token punctuation">{</span>
+        i <span class="token operator">&lt;&lt;-</span> <span class="token number">1</span>
+      <span class="token punctuation">}</span>
+      return<span class="token punctuation">(</span>time_diffs<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+
+x <span class="token operator">&lt;-</span> loop<span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">,</span> <span class="token number">7</span><span class="token punctuation">,</span> <span class="token number">20</span><span class="token punctuation">)</span>
+x<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> x<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> x<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> x<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> x<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token comment">#&gt; [1] 10</span>
+<span class="token comment">#&gt; [1] 7</span>
+<span class="token comment">#&gt; [1] 20</span>
+<span class="token comment">#&gt; [1] 10</span>
+<span class="token comment">#&gt; [1] 7</span>
+</code></pre><p>El término técnico para la función <code>loop</code> es un ‘closure’. Cómo funcionan los closures está más allá del alcance de esta viñeta; si deseas aprender más, entonces "Advanced R" de Hadley Wickham tiene una buena explicación.</p>
+<p>Cuando usamos <code>loop</code> en la función <code>timeout</code>, no necesitamos asignar su salida a un nombre; puede ser una función ‘anónima’. Se llamará siempre que un cliente esté a punto de esperar y necesite saber cuánto tiempo debe esperar. Debido a que solo se generan tres clientes, y su primer paso es el paso de <code>timeout</code>, se les asigna 7, 10 y 20 en orden.</p>
+<p>Note que este código difiere del SimPy en el orden en que se definen los clientes. Aquí, el primer cliente que se define es el que llega a las 2 y espera 7. Eso es porque los argumentos a <code>at()</code> deben estar en orden ascendente.</p>
+<pre data-role="codeBlock" data-info="r" class="language-r r"><code>library<span class="token punctuation">(</span>simmer<span class="token punctuation">)</span>
+
+<span class="token comment"># Function to specify a series of waiting times in a loop</span>
+loop <span class="token operator">&lt;-</span> <span class="token keyword keyword-function">function</span><span class="token punctuation">(</span><span class="token ellipsis">...</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    time_diffs <span class="token operator">&lt;-</span> c<span class="token punctuation">(</span><span class="token ellipsis">...</span><span class="token punctuation">)</span>
+    i <span class="token operator">&lt;-</span> <span class="token number">0</span>
+    <span class="token keyword keyword-function">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword keyword-if">if</span> <span class="token punctuation">(</span>i <span class="token operator">&lt;</span> length<span class="token punctuation">(</span>time_diffs<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        i <span class="token operator">&lt;&lt;-</span> i<span class="token operator">+</span><span class="token number">1</span>
+      <span class="token punctuation">}</span> <span class="token keyword keyword-else">else</span> <span class="token punctuation">{</span>
+        i <span class="token operator">&lt;&lt;-</span> <span class="token number">1</span>
+      <span class="token punctuation">}</span>
+      return<span class="token punctuation">(</span>time_diffs<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+
+customer <span class="token operator">&lt;-</span>
+  trajectory<span class="token punctuation">(</span><span class="token string">"Customer's path"</span><span class="token punctuation">)</span> <span class="token percent-operator operator">%&gt;%</span>
+  log_<span class="token punctuation">(</span><span class="token string">"Here I am"</span><span class="token punctuation">)</span> <span class="token percent-operator operator">%&gt;%</span>
+  timeout<span class="token punctuation">(</span>loop<span class="token punctuation">(</span><span class="token number">7</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">,</span> <span class="token number">20</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token percent-operator operator">%&gt;%</span>
+  log_<span class="token punctuation">(</span><span class="token string">"I must leave"</span><span class="token punctuation">)</span>
+
+bank <span class="token operator">&lt;-</span>
+  simmer<span class="token punctuation">(</span><span class="token string">"bank"</span><span class="token punctuation">)</span> <span class="token percent-operator operator">%&gt;%</span>
+  add_generator<span class="token punctuation">(</span><span class="token string">"Customer"</span><span class="token punctuation">,</span> customer<span class="token punctuation">,</span> at<span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">12</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+bank <span class="token percent-operator operator">%&gt;%</span> run<span class="token punctuation">(</span>until <span class="token operator">=</span> <span class="token number">400</span><span class="token punctuation">)</span>
+<span class="token comment">#&gt; 2: Customer0: Here I am</span>
+<span class="token comment">#&gt; 5: Customer1: Here I am</span>
+<span class="token comment">#&gt; 9: Customer0: I must leave</span>
+<span class="token comment">#&gt; 12: Customer2: Here I am</span>
+<span class="token comment">#&gt; 15: Customer1: I must leave</span>
+<span class="token comment">#&gt; 32: Customer2: I must leave</span>
+<span class="token comment">#&gt; simmer environment: bank | now: 32 | next: </span>
+<span class="token comment">#&gt; { Monitor: in memory }</span>
+<span class="token comment">#&gt; { Source: Customer | monitored: 1 | n_generated: 3 }</span>
+bank <span class="token percent-operator operator">%&gt;%</span> get_mon_arrivals<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token comment">#&gt;        name start_time end_time activity_time finished replication</span>
+<span class="token comment">#&gt; 1 Customer0          2        9             7     TRUE           1</span>
+<span class="token comment">#&gt; 2 Customer1          5       15            10     TRUE           1</span>
+<span class="token comment">#&gt; 3 Customer2         12       32            20     TRUE           1</span>
+</code></pre><p>Alternativamente, podemos crear tres trayectorias diferentes de clientes para los tres tiempos de espera. Esto se hace mejor creando una plantilla inicial y luego modificando el tiempo de espera para cada copia.</p>
+<p>Note que el orden en que se definen los clientes no importa esta vez, y también podemos nombrar a cada cliente.</p>
+<pre data-role="codeBlock" data-info="r" class="language-r r"><code>library<span class="token punctuation">(</span>simmer<span class="token punctuation">)</span>
+
+<span class="token comment"># Create a template trajectory</span>
+customer <span class="token operator">&lt;-</span>
+  trajectory<span class="token punctuation">(</span><span class="token string">"Customer's path"</span><span class="token punctuation">)</span> <span class="token percent-operator operator">%&gt;%</span>
+  log_<span class="token punctuation">(</span><span class="token string">"Here I am"</span><span class="token punctuation">)</span> <span class="token percent-operator operator">%&gt;%</span>
+  timeout<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span> <span class="token percent-operator operator">%&gt;%</span> <span class="token comment"># The timeout of 1 is a placeholder to be overwritten later</span>
+
+
+  log_<span class="token punctuation">(</span><span class="token string">"I must leave"</span><span class="token punctuation">)</span>
+
+<span class="token comment"># Create three copies of the template</span>
+Klaus <span class="token operator">&lt;-</span> customer
+Tony <span class="token operator">&lt;-</span> customer
+Evelyn <span class="token operator">&lt;-</span> customer
+
+<span class="token comment"># Modify the timeout of each copy</span>
+Klaus<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span> <span class="token operator">&lt;-</span> timeout<span class="token punctuation">(</span>trajectory<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">)</span>
+Tony<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span> <span class="token operator">&lt;-</span> timeout<span class="token punctuation">(</span>trajectory<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token number">7</span><span class="token punctuation">)</span>
+Evelyn<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span> <span class="token operator">&lt;-</span> timeout<span class="token punctuation">(</span>trajectory<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token number">20</span><span class="token punctuation">)</span>
+
+<span class="token comment"># Check that the modifications worked</span>
+Klaus
+<span class="token comment">#&gt; trajectory: Customer's path, 3 activities</span>
+<span class="token comment">#&gt; { Activity: Log          | message: Here I am, level: 0 }</span>
+<span class="token comment">#&gt; { Activity: Timeout      | delay: 10 }</span>
+<span class="token comment">#&gt; { Activity: Log          | message: I must lea..., level: 0 }</span>
+Tony
+<span class="token comment">#&gt; trajectory: Customer's path, 3 activities</span>
+<span class="token comment">#&gt; { Activity: Log          | message: Here I am, level: 0 }</span>
+<span class="token comment">#&gt; { Activity: Timeout      | delay: 7 }</span>
+<span class="token comment">#&gt; { Activity: Log          | message: I must lea..., level: 0 }</span>
+Evelyn
+<span class="token comment">#&gt; trajectory: Customer's path, 3 activities</span>
+<span class="token comment">#&gt; { Activity: Log          | message: Here I am, level: 0 }</span>
+<span class="token comment">#&gt; { Activity: Timeout      | delay: 20 }</span>
+<span class="token comment">#&gt; { Activity: Log          | message: I must lea..., level: 0 }</span>
+
+bank <span class="token operator">&lt;-</span>
+  simmer<span class="token punctuation">(</span><span class="token string">"bank"</span><span class="token punctuation">)</span> <span class="token percent-operator operator">%&gt;%</span>
+  add_generator<span class="token punctuation">(</span><span class="token string">"Klaus"</span><span class="token punctuation">,</span> Klaus<span class="token punctuation">,</span> at<span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token percent-operator operator">%&gt;%</span>
+  add_generator<span class="token punctuation">(</span><span class="token string">"Tony"</span><span class="token punctuation">,</span> Tony<span class="token punctuation">,</span> at<span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token percent-operator operator">%&gt;%</span>
+  add_generator<span class="token punctuation">(</span><span class="token string">"Evelyn"</span><span class="token punctuation">,</span> Evelyn<span class="token punctuation">,</span> at<span class="token punctuation">(</span><span class="token number">12</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+bank <span class="token percent-operator operator">%&gt;%</span> run<span class="token punctuation">(</span>until <span class="token operator">=</span> <span class="token number">400</span><span class="token punctuation">)</span>
+<span class="token comment">#&gt; 2: Tony0: Here I am</span>
+<span class="token comment">#&gt; 5: Klaus0: Here I am</span>
+<span class="token comment">#&gt; 9: Tony0: I must leave</span>
+<span class="token comment">#&gt; 12: Evelyn0: Here I am</span>
+<span class="token comment">#&gt; 15: Klaus0: I must leave</span>
+<span class="token comment">#&gt; 32: Evelyn0: I must leave</span>
+<span class="token comment">#&gt; simmer environment: bank | now: 32 | next: </span>
+<span class="token comment">#&gt; { Monitor: in memory }</span>
+<span class="token comment">#&gt; { Source: Klaus | monitored: 1 | n_generated: 1 }</span>
+<span class="token comment">#&gt; { Source: Tony | monitored: 1 | n_generated: 1 }</span>
+<span class="token comment">#&gt; { Source: Evelyn | monitored: 1 | n_generated: 1 }</span>
+bank <span class="token percent-operator operator">%&gt;%</span> get_mon_arrivals<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token comment">#&gt;      name start_time end_time activity_time finished replication</span>
+<span class="token comment">#&gt; 1   Tony0          2        9             7     TRUE           1</span>
+<span class="token comment">#&gt; 2  Klaus0          5       15            10     TRUE           1</span>
+<span class="token comment">#&gt; 3 Evelyn0         12       32            20     TRUE           1</span>
+</code></pre><p>De nuevo, las simulaciones terminan antes de los 400 especificados en la función <code>run</code>.</p>
+<h2 id="muchos-clientes">Muchos clientes </h2>
+<p>Otro cambio nos permitirá tener más clientes. Para mayor claridad, no usamos números aleatorios en este modelo.</p>
+<p>El cambio está en la función <code>add_generator</code>, donde usamos una función de conveniencia <code>from_to</code> para crear una secuencia de horas de inicio para cinco clientes, comenzando a la hora 0, con un tiempo entre llegadas de 10 entre cada cliente. Una idiosincrasia de la sintaxis es que no se crea ninguna llegada en la hora <code>to</code>, por lo que la damos como 41, una unidad después de la última llegada que se generará. Otra es que el tiempo entre llegadas debe especificarse como una función, por lo tanto definimos una función constante <code>function() {10}</code>.</p>
+<pre data-role="codeBlock" data-info="r" class="language-r r"><code>library<span class="token punctuation">(</span>simmer<span class="token punctuation">)</span>
+
+customer <span class="token operator">&lt;-</span>
+  trajectory<span class="token punctuation">(</span><span class="token string">"Customer's path"</span><span class="token punctuation">)</span> <span class="token percent-operator operator">%&gt;%</span>
+  log_<span class="token punctuation">(</span><span class="token string">"Here I am"</span><span class="token punctuation">)</span> <span class="token percent-operator operator">%&gt;%</span>
+  timeout<span class="token punctuation">(</span><span class="token number">12</span><span class="token punctuation">)</span> <span class="token percent-operator operator">%&gt;%</span>
+  log_<span class="token punctuation">(</span><span class="token string">"I must leave"</span><span class="token punctuation">)</span>
+
+bank <span class="token operator">&lt;-</span>
+  simmer<span class="token punctuation">(</span><span class="token string">"bank"</span><span class="token punctuation">)</span> <span class="token percent-operator operator">%&gt;%</span>
+  add_generator<span class="token punctuation">(</span><span class="token string">"Customer"</span><span class="token punctuation">,</span> customer<span class="token punctuation">,</span> from_to<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">41</span><span class="token punctuation">,</span> <span class="token keyword keyword-function">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token number">10</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+bank <span class="token percent-operator operator">%&gt;%</span> run<span class="token punctuation">(</span>until <span class="token operator">=</span> <span class="token number">400</span><span class="token punctuation">)</span>
+<span class="token comment">#&gt; 0: Customer0: Here I am</span>
+<span class="token comment">#&gt; 10: Customer1: Here I am</span>
+<span class="token comment">#&gt; 12: Customer0: I must leave</span>
+<span class="token comment">#&gt; 20: Customer2: Here I am</span>
+<span class="token comment">#&gt; 22: Customer1: I must leave</span>
+<span class="token comment">#&gt; 30: Customer3: Here I am</span>
+<span class="token comment">#&gt; 32: Customer2: I must leave</span>
+<span class="token comment">#&gt; 40: Customer4: Here I am</span>
+<span class="token comment">#&gt; 42: Customer3: I must leave</span>
+<span class="token comment">#&gt; 52: Customer4: I must leave</span>
+<span class="token comment">#&gt; simmer environment: bank | now: 52 | next: </span>
+<span class="token comment">#&gt; { Monitor: in memory }</span>
+<span class="token comment">#&gt; { Source: Customer | monitored: 1 | n_generated: 5 }</span>
+bank <span class="token percent-operator operator">%&gt;%</span> get_mon_arrivals<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token comment">#&gt;        name start_time end_time activity_time finished replication</span>
+<span class="token comment">#&gt; 1 Customer0          0       12            12     TRUE           1</span>
+<span class="token comment">#&gt; 2 Customer1         10       22            12     TRUE           1</span>
+<span class="token comment">#&gt; 3 Customer2         20       32            12     TRUE           1</span>
+<span class="token comment">#&gt; 4 Customer3         30       42            12     TRUE           1</span>
+<span class="token comment">#&gt; 5 Customer4         40       52            12     TRUE           1</span>
+</code></pre><h2 id="muchos-clientes-aleatorios">Muchos clientes aleatorios </h2>
+<p>Ahora extendemos este modelo para permitir llegadas al azar. En simulación, esto generalmente se interpreta como que los tiempos entre llegadas de clientes se distribuyen como variables aleatorias exponenciales. Hay poco cambio en nuestro programa. La única diferencia entre este y el ejemplo anterior de un solo cliente generado en un momento aleatorio es que este ejemplo genera varios clientes en diferentes momentos aleatorios.</p>
+<p>El cambio ocurre en los argumentos de la función <code>add_generator</code>. La función <code>rexp</code> dibuja de una distribución exponencial con el parámetro dado, que en este caso es 1/10. Vea <code>?rexp</code> para más detalles. También sembramos el generador de números aleatorios con 1289 para que la misma secuencia de números aleatorios se dibuje cada vez que se ejecute el script. El 0 es la hora del primer cliente, luego se dibujan cuatro tiempos entre llegadas aleatorios, y un -1 final detiene el generador.</p>
+<p>La razón por la que no podemos usar la función <code>from_to</code> aquí es que queremos controlar el número de llegadas que se generan, en lugar del tiempo de finalización de la generación de llegadas.</p>
+<pre data-role="codeBlock" data-info="r" class="language-r r"><code>library<span class="token punctuation">(</span>simmer<span class="token punctuation">)</span>
+
+set.seed<span class="token punctuation">(</span><span class="token number">1289</span><span class="token punctuation">)</span>
+
+customer <span class="token operator">&lt;-</span>
+  trajectory<span class="token punctuation">(</span><span class="token string">"Customer's path"</span><span class="token punctuation">)</span> <span class="token percent-operator operator">%&gt;%</span>
+  log_<span class="token punctuation">(</span><span class="token string">"Here I am"</span><span class="token punctuation">)</span> <span class="token percent-operator operator">%&gt;%</span>
+  timeout<span class="token punctuation">(</span><span class="token number">12</span><span class="token punctuation">)</span> <span class="token percent-operator operator">%&gt;%</span>
+  log_<span class="token punctuation">(</span><span class="token string">"I must leave"</span><span class="token punctuation">)</span>
+
+bank <span class="token operator">&lt;-</span>
+  simmer<span class="token punctuation">(</span><span class="token string">"bank"</span><span class="token punctuation">)</span> <span class="token percent-operator operator">%&gt;%</span>
+  add_generator<span class="token punctuation">(</span><span class="token string">"Customer"</span><span class="token punctuation">,</span> customer<span class="token punctuation">,</span> <span class="token keyword keyword-function">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>c<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> rexp<span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token operator">/</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+bank <span class="token percent-operator operator">%&gt;%</span> run<span class="token punctuation">(</span>until <span class="token operator">=</span> <span class="token number">400</span><span class="token punctuation">)</span>
+<span class="token comment">#&gt; 0: Customer0: Here I am</span>
+<span class="token comment">#&gt; 12: Customer0: I must leave</span>
+<span class="token comment">#&gt; 14.3114: Customer1: Here I am</span>
+<span class="token comment">#&gt; 26.3114: Customer1: I must leave</span>
+<span class="token comment">#&gt; 26.5588: Customer2: Here I am</span>
+<span class="token comment">#&gt; 35.8506: Customer3: Here I am</span>
+<span class="token comment">#&gt; 38.2706: Customer4: Here I am</span>
+<span class="token comment">#&gt; 38.5588: Customer2: I must leave</span>
+<span class="token comment">#&gt; 47.8506: Customer3: I must leave</span>
+<span class="token comment">#&gt; 50.2706: Customer4: I must leave</span>
+<span class="token comment">#&gt; simmer environment: bank | now: 50.2705868901582 | next: </span>
+<span class="token comment">#&gt; { Monitor: in memory }</span>
+<span class="token comment">#&gt; { Source: Customer | monitored: 1 | n_generated: 5 }</span>
+bank <span class="token percent-operator operator">%&gt;%</span> get_mon_arrivals<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token comment">#&gt;        name start_time end_time activity_time finished replication</span>
+<span class="token comment">#&gt; 1 Customer0    0.00000 12.00000            12     TRUE           1</span>
+<span class="token comment">#&gt; 2 Customer1   14.31136 26.31136            12     TRUE           1</span>
+<span class="token comment">#&gt; 3 Customer2   26.55882 38.55882            12     TRUE           1</span>
+<span class="token comment">#&gt; 4 Customer3   35.85064 47.85064            12     TRUE           1</span>
+<span class="token comment">#&gt; 5 Customer4   38.27059 50.27059            12     TRUE           1</span>
+</code></pre><h2 id="un-mostrador-de-servicio">Un mostrador de servicio </h2>
+<p>Hasta ahora, el modelo ha sido más como una galería de arte, los clientes entran, miran y se van. Ahora van a necesitar servicio del cajero del banco. Extendemos el modelo para incluir un mostrador de servicio que se modelará como un ‘recurso’. Las acciones de un recurso son simples: un cliente solicita una unidad del recurso (un cajero). Si hay uno libre, el cliente recibe servicio (y la unidad ya no está disponible para otros clientes). Si no hay cajero libre, el cliente se une a la cola (administrada por el objeto recurso) hasta que sea su turno para ser atendido. A medida que cada cliente completa el servicio y libera la unidad, el cajero puede comenzar a atender al siguiente en la fila.</p>
+<h3 id="un-mostrador-de-servicio-1">Un mostrador de servicio </h3>
+<p>El mostrador de servicio se crea con la función <code>add_resource</code>. Los argumentos predeterminados especifican que puede atender a un cliente a la vez y tiene capacidad de cola infinita.</p>
+<p>La función <code>seize</code> hace</p>
+<p>que el cliente se una a la cola en el mostrador. Si la cola está vacía y el mostrador está disponible (no atendiendo a ningún cliente), entonces el cliente reclama el mostrador para sí mismo y pasa al paso <code>timeout</code>. De lo contrario, el cliente debe esperar hasta que el mostrador esté disponible. El comportamiento del cliente mientras está en la cola se controla mediante los argumentos de la función <code>seize</code>, en lugar de por otras funciones. Una vez que se completa el paso <code>timeout</code>, la función <code>release</code> hace que el cliente libere el mostrador para otros clientes en la cola.</p>
+<p>Dado que el rastro de actividad no produce el tiempo de espera por defecto, esto se calcula y se adjunta usando la función <code>transform</code>.</p>
+<pre data-role="codeBlock" data-info="r" class="language-r r"><code>library<span class="token punctuation">(</span>simmer<span class="token punctuation">)</span>
+
+set.seed<span class="token punctuation">(</span><span class="token number">1234</span><span class="token punctuation">)</span>
+
+bank <span class="token operator">&lt;-</span> simmer<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+customer <span class="token operator">&lt;-</span>
+  trajectory<span class="token punctuation">(</span><span class="token string">"Customer's path"</span><span class="token punctuation">)</span> <span class="token percent-operator operator">%&gt;%</span>
+  log_<span class="token punctuation">(</span><span class="token string">"Here I am"</span><span class="token punctuation">)</span> <span class="token percent-operator operator">%&gt;%</span>
+  set_attribute<span class="token punctuation">(</span><span class="token string">"start_time"</span><span class="token punctuation">,</span> <span class="token keyword keyword-function">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>now<span class="token punctuation">(</span>bank<span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token punctuation">)</span> <span class="token percent-operator operator">%&gt;%</span>
+  seize<span class="token punctuation">(</span><span class="token string">"counter"</span><span class="token punctuation">)</span> <span class="token percent-operator operator">%&gt;%</span>
+  log_<span class="token punctuation">(</span><span class="token keyword keyword-function">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>paste<span class="token punctuation">(</span><span class="token string">"Waited: "</span><span class="token punctuation">,</span> now<span class="token punctuation">(</span>bank<span class="token punctuation">)</span> <span class="token operator">-</span> get_attribute<span class="token punctuation">(</span>bank<span class="token punctuation">,</span> <span class="token string">"start_time"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token punctuation">)</span> <span class="token percent-operator operator">%&gt;%</span>
+  timeout<span class="token punctuation">(</span><span class="token number">12</span><span class="token punctuation">)</span> <span class="token percent-operator operator">%&gt;%</span>
+  release<span class="token punctuation">(</span><span class="token string">"counter"</span><span class="token punctuation">)</span> <span class="token percent-operator operator">%&gt;%</span>
+  log_<span class="token punctuation">(</span><span class="token keyword keyword-function">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>paste<span class="token punctuation">(</span><span class="token string">"Finished: "</span><span class="token punctuation">,</span> now<span class="token punctuation">(</span>bank<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+bank <span class="token operator">&lt;-</span>
+  simmer<span class="token punctuation">(</span><span class="token string">"bank"</span><span class="token punctuation">)</span> <span class="token percent-operator operator">%&gt;%</span>
+  add_resource<span class="token punctuation">(</span><span class="token string">"counter"</span><span class="token punctuation">)</span> <span class="token percent-operator operator">%&gt;%</span>
+  add_generator<span class="token punctuation">(</span><span class="token string">"Customer"</span><span class="token punctuation">,</span> customer<span class="token punctuation">,</span> <span class="token keyword keyword-function">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>c<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> rexp<span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token operator">/</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+bank <span class="token percent-operator operator">%&gt;%</span> run<span class="token punctuation">(</span>until <span class="token operator">=</span> <span class="token number">400</span><span class="token punctuation">)</span>
+<span class="token comment">#&gt; 0: Customer0: Here I am</span>
+<span class="token comment">#&gt; 0: Customer0: Waited:  0</span>
+<span class="token comment">#&gt; 12: Customer0: Finished:  12</span>
+<span class="token comment">#&gt; 25.0176: Customer1: Here I am</span>
+<span class="token comment">#&gt; 25.0176: Customer1: Waited:  0</span>
+<span class="token comment">#&gt; 27.4852: Customer2: Here I am</span>
+<span class="token comment">#&gt; 27.551: Customer3: Here I am</span>
+<span class="token comment">#&gt; 37.0176: Customer1: Finished:  37.0175860496223</span>
+<span class="token comment">#&gt; 37.0176: Customer2: Waited:  9.53241116646677</span>
+<span class="token comment">#&gt; 44.9785: Customer4: Here I am</span>
+<span class="token comment">#&gt; 49.0176: Customer2: Finished:  49.0175860496223</span>
+<span class="token comment">#&gt; 49.0176: Customer3: Waited:  21.466591599012</span>
+<span class="token comment">#&gt; 61.0176: Customer3: Finished:  61.0175860496223</span>
+<span class="token comment">#&gt; 61.0176: Customer4: Waited:  16.0391307005949</span>
+<span class="token comment">#&gt; 73.0176: Customer4: Finished:  73.0175860496223</span>
+<span class="token comment">#&gt; simmer environment: bank | now: 73.0175860496223 | next: </span>
+<span class="token comment">#&gt; { Monitor: in memory }</span>
+<span class="token comment">#&gt; { Resource: counter | monitored: TRUE | server status: 0(1) | queue status: 0(Inf) }</span>
+<span class="token comment">#&gt; { Source: Customer | monitored: 1 | n_generated: 5 }</span>
+bank <span class="token percent-operator operator">%&gt;%</span>
+  get_mon_arrivals<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token percent-operator operator">%&gt;%</span>
+  transform<span class="token punctuation">(</span>waiting_time <span class="token operator">=</span> end_time <span class="token operator">-</span> start_time <span class="token operator">-</span> activity_time<span class="token punctuation">)</span>
+<span class="token comment">#&gt;        name start_time end_time activity_time finished replication waiting_time</span>
+<span class="token comment">#&gt; 1 Customer0    0.00000 12.00000            12     TRUE           1     0.000000</span>
+<span class="token comment">#&gt; 2 Customer1   25.01759 37.01759            12     TRUE           1     0.000000</span>
+<span class="token comment">#&gt; 3 Customer2   27.48517 49.01759            12     TRUE           1     9.532411</span>
+<span class="token comment">#&gt; 4 Customer3   27.55099 61.01759            12     TRUE           1    21.466592</span>
+<span class="token comment">#&gt; 5 Customer4   44.97846 73.01759            12     TRUE           1    16.039131</span>
+</code></pre><p>Examinando el rastro vemos que los dos primeros clientes reciben servicio instantáneo, pero los demás tienen que esperar. Todavía solo tenemos cinco clientes, por lo que no podemos sacar conclusiones generales.</p>
+<h2 id="un-servidor-con-un-tiempo-de-servicio-aleatorio">Un servidor con un tiempo de servicio aleatorio </h2>
+<p>Este es un cambio simple al modelo en el que mantenemos el mostrador de servicio único, pero hacemos que el tiempo de servicio del cliente sea una variable aleatoria. Como es tradicional en el estudio de colas simples, primero asumimos un tiempo de servicio exponencial.</p>
+<p>Note que el argumento para <code>timeout</code> debe ser una función, de lo contrario aplicaría un <code>timeout</code> constante a cada cliente.</p>
+<pre data-role="codeBlock" data-info="r" class="language-r r"><code>library<span class="token punctuation">(</span>simmer<span class="token punctuation">)</span>
+
+set.seed<span class="token punctuation">(</span><span class="token number">1269</span><span class="token punctuation">)</span>
+
+customer <span class="token operator">&lt;-</span>
+  trajectory<span class="token punctuation">(</span><span class="token string">"Customer's path"</span><span class="token punctuation">)</span> <span class="token percent-operator operator">%&gt;%</span>
+  log_<span class="token punctuation">(</span><span class="token string">"Here I am"</span><span class="token punctuation">)</span> <span class="token percent-operator operator">%&gt;%</span>
+  set_attribute<span class="token punctuation">(</span><span class="token string">"start_time"</span><span class="token punctuation">,</span> <span class="token keyword keyword-function">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>now<span class="token punctuation">(</span>bank<span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token punctuation">)</span> <span class="token percent-operator operator">%&gt;%</span>
+  seize<span class="token punctuation">(</span><span class="token string">"counter"</span><span class="token punctuation">)</span> <span class="token percent-operator operator">%&gt;%</span>
+  log_<span class="token punctuation">(</span><span class="token keyword keyword-function">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>paste<span class="token punctuation">(</span><span class="token string">"Waited: "</span><span class="token punctuation">,</span> now<span class="token punctuation">(</span>bank<span class="token punctuation">)</span> <span class="token operator">-</span> get_attribute<span class="token punctuation">(</span>bank<span class="token punctuation">,</span> <span class="token string">"start_time"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token punctuation">)</span> <span class="token percent-operator operator">%&gt;%</span>
+  <span class="token comment"># timeout(rexp(1, 1/12)) would generate a single random time and use it for</span>
+  <span class="token comment"># every arrival, whereas the following line generates a random time for each</span>
+  <span class="token comment"># arrival</span>
+  timeout<span class="token punctuation">(</span><span class="token keyword keyword-function">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>rexp<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token operator">/</span><span class="token number">12</span><span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token punctuation">)</span> <span class="token percent-operator operator">%&gt;%</span>
+  release<span class="token punctuation">(</span><span class="token string">"counter"</span><span class="token punctuation">)</span> <span class="token percent-operator operator">%&gt;%</span>
+  log_<span class="token punctuation">(</span><span class="token keyword keyword-function">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>paste<span class="token punctuation">(</span><span class="token string">"Finished: "</span><span class="token punctuation">,</span> now<span class="token punctuation">(</span>bank<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+bank <span class="token operator">&lt;-</span>
+  simmer<span class="token punctuation">(</span><span class="token string">"bank"</span><span class="token punctuation">)</span> <span class="token percent-operator operator">%&gt;%</span>
+  add_resource<span class="token punctuation">(</span><span class="token string">"counter"</span><span class="token punctuation">)</span> <span class="token percent-operator operator">%&gt;%</span>
+  add_generator<span class="token punctuation">(</span><span class="token string">"Customer"</span><span class="token punctuation">,</span> customer<span class="token punctuation">,</span> <span class="token keyword keyword-function">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>c<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> rexp<span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token operator">/</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+bank <span class="token percent-operator operator">%&gt;%</span> run<span class="token punctuation">(</span>until <span class="token operator">=</span> <span class="token number">400</span><span class="token punctuation">)</span>
+<span class="token comment">#&gt; 0: Customer0: Here I am</span>
+<span class="token comment">#&gt; 0: Customer0: Waited:  0</span>
+<span class="token comment">#&gt; 3.68365: Customer1: Here I am</span>
+<span class="token comment">#&gt; 3.89529: Customer2: Here I am</span>
+<span class="token comment">#&gt; 4.91521: Customer0: Finished:  4.91521483175031</span>
+<span class="token comment">#&gt; 4.91521: Customer1: Waited:  1.23156707156024</span>
+<span class="token comment">#&gt; 10.961: Customer3: Here I am</span>
+<span class="token comment">#&gt; 12.4143: Customer4: Here I am</span>
+<span class="token comment">#&gt; 21.0552: Customer1: Finished:  21.055182798071</span>
+<span class="token comment">#&gt; 21.0552: Customer2: Waited:  17.1598927142276</span>
+<span class="token comment">#&gt; 65.3116: Customer2: Finished:  65.3115507844349</span>
+<span class="token comment">#&gt; 65.3116: Customer3: Waited:  54.3505873236467</span>
+<span class="token comment">#&gt; 80.1134: Customer3: Finished:  80.1133545241526</span>
+<span class="token comment">#&gt; 80.1134: Customer4: Waited:  67.6990166719428</span>
+<span class="token comment">#&gt; 93.7286: Customer4: Finished:  93.7285504163997</span>
+<span class="token comment">#&gt; simmer environment: bank | now: 93.7285504163997 | next: </span>
+<span class="token comment">#&gt; { Monitor: in memory }</span>
+<span class="token comment">#&gt; { Resource: counter | monitored: TRUE | server status: 0(1) | queue status: 0(Inf) }</span>
+<span class="token comment">#&gt; { Source: Customer | monitored: 1 | n_generated: 5 }</span>
+bank <span class="token percent-operator operator">%&gt;%</span>
+  get_mon_arrivals<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token percent-operator operator">%&gt;%</span>
+  transform<span class="token punctuation">(</span>waiting_time <span class="token operator">=</span> end_time <span class="token operator">-</span> start_time <span class="token operator">-</span> activity_time<span class="token punctuation">)</span>
+<span class="token comment">#&gt;        name start_time  end_time activity_time finished replication</span>
+<span class="token comment">#&gt; 1 Customer0   0.000000  4.915215      4.915215     TRUE           1</span>
+<span class="token comment">#&gt; 2 Customer1   3.683648 21.055183     16.139968     TRUE           1</span>
+<span class="token comment">#&gt; 3 Customer2   3.895290 65.311551     44.256368     TRUE           1</span>
+<span class="token comment">#&gt; 4 Customer3  10.960963 80.113355     14.801804     TRUE           1</span>
+<span class="token comment">#&gt; 5 Customer4  12.414338 93.728550     13.615196     TRUE           1</span>
+<span class="token comment">#&gt;   waiting_time</span>
+<span class="token comment">#&gt; 1     0.000000</span>
+<span class="token comment">#&gt; 2     1.231567</span>
+<span class="token comment">#&gt; 3    17.159893</span>
+<span class="token comment">#&gt; 4    54.350587</span>
+<span class="token comment">#&gt; 5    67.699017</span>
+</code></pre><p>Este modelo con llegadas aleatorias y tiempos de servicio exponenciales es un ejemplo de una cola M/M/1 y podría resolverse bastante fácilmente analíticamente para calcular el tiempo de espera promedio en estado estacionario y otras características operativas. (Pero no tan fácilmente resuelto para su comportamiento transitorio).</p>
+<h2 id="varios-mostradores-de-servicio">Varios mostradores de servicio </h2>
+<p>Cuando introducimos varios mostradores debemos decidir sobre una disciplina de cola. ¿Los clientes van a formar una sola cola o van a formar colas separadas frente a cada mostrador? Luego hay complicaciones: ¿se les permitirá cambiar de fila (jockey)? Primero consideramos una sola cola con varios mostradores y luego consideramos colas separadas. No veremos el jockeying.</p>
+<h3 id="varios-mostradores-pero-una-sola">Varios mostradores pero una sola </h3>
+<p>cola<br>
+Aquí modelamos un banco cuyos clientes llegan al azar y van a ser atendidos en un grupo de mostradores, tomando un tiempo de servicio aleatorio, donde asumimos que los clientes que esperan forman una sola cola FIFO.</p>
+<p>La única diferencia entre este modelo y el modelo de un solo servidor es en la función <code>add_resource</code>, donde hemos aumentado la capacidad a dos para que pueda atender a dos clientes a la vez.</p>
+<pre data-role="codeBlock" data-info="r" class="language-r r"><code>library<span class="token punctuation">(</span>simmer<span class="token punctuation">)</span>
+
+set.seed<span class="token punctuation">(</span><span class="token number">1269</span><span class="token punctuation">)</span>
+
+customer <span class="token operator">&lt;-</span>
+  trajectory<span class="token punctuation">(</span><span class="token string">"Customer's path"</span><span class="token punctuation">)</span> <span class="token percent-operator operator">%&gt;%</span>
+  log_<span class="token punctuation">(</span><span class="token string">"Here I am"</span><span class="token punctuation">)</span> <span class="token percent-operator operator">%&gt;%</span>
+  set_attribute<span class="token punctuation">(</span><span class="token string">"start_time"</span><span class="token punctuation">,</span> <span class="token keyword keyword-function">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>now<span class="token punctuation">(</span>bank<span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token punctuation">)</span> <span class="token percent-operator operator">%&gt;%</span>
+  seize<span class="token punctuation">(</span><span class="token string">"counter"</span><span class="token punctuation">)</span> <span class="token percent-operator operator">%&gt;%</span>
+  log_<span class="token punctuation">(</span><span class="token keyword keyword-function">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>paste<span class="token punctuation">(</span><span class="token string">"Waited: "</span><span class="token punctuation">,</span> now<span class="token punctuation">(</span>bank<span class="token punctuation">)</span> <span class="token operator">-</span> get_attribute<span class="token punctuation">(</span>bank<span class="token punctuation">,</span> <span class="token string">"start_time"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token punctuation">)</span> <span class="token percent-operator operator">%&gt;%</span>
+  timeout<span class="token punctuation">(</span><span class="token keyword keyword-function">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>rexp<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token operator">/</span><span class="token number">12</span><span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token punctuation">)</span> <span class="token percent-operator operator">%&gt;%</span>
+  release<span class="token punctuation">(</span><span class="token string">"counter"</span><span class="token punctuation">)</span> <span class="token percent-operator operator">%&gt;%</span>
+  log_<span class="token punctuation">(</span><span class="token keyword keyword-function">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>paste<span class="token punctuation">(</span><span class="token string">"Finished: "</span><span class="token punctuation">,</span> now<span class="token punctuation">(</span>bank<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+bank <span class="token operator">&lt;-</span>
+  simmer<span class="token punctuation">(</span><span class="token string">"bank"</span><span class="token punctuation">)</span> <span class="token percent-operator operator">%&gt;%</span>
+  add_resource<span class="token punctuation">(</span><span class="token string">"counter"</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span> <span class="token percent-operator operator">%&gt;%</span> <span class="token comment"># Here is the change</span>
+  add_generator<span class="token punctuation">(</span><span class="token string">"Customer"</span><span class="token punctuation">,</span> customer<span class="token punctuation">,</span> <span class="token keyword keyword-function">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>c<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> rexp<span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token operator">/</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+bank <span class="token percent-operator operator">%&gt;%</span> run<span class="token punctuation">(</span>until <span class="token operator">=</span> <span class="token number">400</span><span class="token punctuation">)</span>
+<span class="token comment">#&gt; 0: Customer0: Here I am</span>
+<span class="token comment">#&gt; 0: Customer0: Waited:  0</span>
+<span class="token comment">#&gt; 3.68365: Customer1: Here I am</span>
+<span class="token comment">#&gt; 3.68365: Customer1: Waited:  0</span>
+<span class="token comment">#&gt; 3.89529: Customer2: Here I am</span>
+<span class="token comment">#&gt; 4.91521: Customer0: Finished:  4.91521483175031</span>
+<span class="token comment">#&gt; 4.91521: Customer2: Waited:  1.01992474790691</span>
+<span class="token comment">#&gt; 10.961: Customer3: Here I am</span>
+<span class="token comment">#&gt; 12.4143: Customer4: Here I am</span>
+<span class="token comment">#&gt; 19.8236: Customer1: Finished:  19.8236157265107</span>
+<span class="token comment">#&gt; 19.8236: Customer3: Waited:  8.86265226572255</span>
+<span class="token comment">#&gt; 34.6254: Customer3: Finished:  34.6254194662285</span>
+<span class="token comment">#&gt; 34.6254: Customer4: Waited:  22.2110816140186</span>
+<span class="token comment">#&gt; 48.2406: Customer4: Finished:  48.2406153584756</span>
+<span class="token comment">#&gt; 49.1716: Customer2: Finished:  49.1715828181142</span>
+<span class="token comment">#&gt; simmer environment: bank | now: 49.1715828181142 | next: </span>
+<span class="token comment">#&gt; { Monitor: in memory }</span>
+<span class="token comment">#&gt; { Resource: counter | monitored: TRUE | server status: 0(2) | queue status: 0(Inf) }</span>
+<span class="token comment">#&gt; { Source: Customer | monitored: 1 | n_generated: 5 }</span>
+bank <span class="token percent-operator operator">%&gt;%</span>
+  get_mon_arrivals<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token percent-operator operator">%&gt;%</span>
+  transform<span class="token punctuation">(</span>waiting_time <span class="token operator">=</span> end_time <span class="token operator">-</span> start_time <span class="token operator">-</span> activity_time<span class="token punctuation">)</span>
+<span class="token comment">#&gt;        name start_time  end_time activity_time finished replication</span>
+<span class="token comment">#&gt; 1 Customer0   0.000000  4.915215      4.915215     TRUE           1</span>
+<span class="token comment">#&gt; 2 Customer1   3.683648 19.823616     16.139968     TRUE           1</span>
+<span class="token comment">#&gt; 3 Customer3  10.960963 34.625419     14.801804     TRUE           1</span>
+<span class="token comment">#&gt; 4 Customer4  12.414338 48.240615     13.615196     TRUE           1</span>
+<span class="token comment">#&gt; 5 Customer2   3.895290 49.171583     44.256368     TRUE           1</span>
+<span class="token comment">#&gt;   waiting_time</span>
+<span class="token comment">#&gt; 1     0.000000</span>
+<span class="token comment">#&gt; 2     0.000000</span>
+<span class="token comment">#&gt; 3     8.862652</span>
+<span class="token comment">#&gt; 4    22.211082</span>
+<span class="token comment">#&gt; 5     1.019925</span>
+</code></pre><p>Los tiempos de espera en este modelo son mucho más cortos que los del mostrador de servicio único. Por ejemplo, el tiempo de espera para Customer3 se ha reducido de casi 17 minutos a menos de 9. De nuevo, tenemos muy pocos clientes procesados para sacar conclusiones generales.</p>
+<h3 id="varios-mostradores-con-colas-individuales">Varios mostradores con colas individuales </h3>
+<p>Ahora se asume que cada mostrador tiene su propia cola. La programación es más complicada porque el cliente debe decidir a qué cola unirse. La técnica obvia es hacer de cada mostrador un recurso separado.</p>
+<p>En la práctica, un cliente podría unirse a la cola más corta. Implementamos este comportamiento seleccionando primero la cola más corta, usando la función <code>select</code>. Luego usamos <code>seize_selected</code> para entrar en la cola elegida, y más tarde <code>release_selected</code>.</p>
+<p>El resto del programa es el mismo que antes.</p>
+<pre data-role="codeBlock" data-info="r" class="language-r r"><code>library<span class="token punctuation">(</span>simmer<span class="token punctuation">)</span>
+
+set.seed<span class="token punctuation">(</span><span class="token number">1014</span><span class="token punctuation">)</span>
+
+customer <span class="token operator">&lt;-</span>
+  trajectory<span class="token punctuation">(</span><span class="token string">"Customer's path"</span><span class="token punctuation">)</span> <span class="token percent-operator operator">%&gt;%</span>
+  log_<span class="token punctuation">(</span><span class="token string">"Here I am"</span><span class="token punctuation">)</span> <span class="token percent-operator operator">%&gt;%</span>
+  set_attribute<span class="token punctuation">(</span><span class="token string">"start_time"</span><span class="token punctuation">,</span> <span class="token keyword keyword-function">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>now<span class="token punctuation">(</span>bank<span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token punctuation">)</span> <span class="token percent-operator operator">%&gt;%</span>
+  select<span class="token punctuation">(</span>c<span class="token punctuation">(</span><span class="token string">"counter1"</span><span class="token punctuation">,</span> <span class="token string">"counter2"</span><span class="token punctuation">)</span><span class="token punctuation">,</span> policy <span class="token operator">=</span> <span class="token string">"shortest-queue"</span><span class="token punctuation">)</span> <span class="token percent-operator operator">%&gt;%</span>
+  seize_selected<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token percent-operator operator">%&gt;%</span>
+  log_<span class="token punctuation">(</span><span class="token keyword keyword-function">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>paste<span class="token punctuation">(</span><span class="token string">"Waited: "</span><span class="token punctuation">,</span> now<span class="token punctuation">(</span>bank<span class="token punctuation">)</span> <span class="token operator">-</span> get_attribute<span class="token punctuation">(</span>bank<span class="token punctuation">,</span> <span class="token string">"start_time"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token punctuation">)</span> <span class="token percent-operator operator">%&gt;%</span>
+  timeout<span class="token punctuation">(</span><span class="token keyword keyword-function">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>rexp<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token operator">/</span><span class="token number">12</span><span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token punctuation">)</span> <span class="token percent-operator operator">%&gt;%</span>
+  release_selected<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token percent-operator operator">%&gt;%</span>
+  log_<span class="token punctuation">(</span><span class="token keyword keyword-function">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>paste<span class="token punctuation">(</span><span class="token string">"Finished: "</span><span class="token punctuation">,</span> now<span class="token punctuation">(</span>bank<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+bank <span class="token operator">&lt;-</span>
+  simmer<span class="token punctuation">(</span><span class="token string">"bank"</span><span class="token punctuation">)</span> <span class="token percent-operator operator">%&gt;%</span>
+  add_resource<span class="token punctuation">(</span><span class="token string">"counter1"</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token percent-operator operator">%&gt;%</span>
+  add_resource<span class="token punctuation">(</span><span class="token string">"counter2"</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token percent-operator operator">%&gt;%</span>
+  add_generator<span class="token punctuation">(</span><span class="token string">"Customer"</span><span class="token punctuation">,</span> customer<span class="token punctuation">,</span> <span class="token keyword keyword-function">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>c<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> rexp<span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token operator">/</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+bank <span class="token percent-operator operator">%&gt;%</span> run<span class="token punctuation">(</span>until <span class="token operator">=</span> <span class="token number">400</span><span class="token punctuation">)</span>
+<span class="token comment">#&gt; 0: Customer0: Here I am</span>
+<span class="token comment">#&gt; 0: Customer0: Waited:  0</span>
+<span class="token comment">#&gt; 23.7144: Customer1: Here I am</span>
+<span class="token comment">#&gt; 23.7144: Customer1: Waited:  0</span>
+<span class="token comment">#&gt; 30.4011: Customer2: Here I am</span>
+<span class="token comment">#&gt; 32.4163: Customer3: Here I am</span>
+<span class="token comment">#&gt; 33.941: Customer1: Finished:  33.94103133502</span>
+<span class="token comment">#&gt; 33.941: Customer3: Waited:  1.52471543798104</span>
+<span class="token comment">#&gt; 39.5302: Customer3: Finished:  39.5301990230619</span>
+<span class="token comment">#&gt; 48.8559: Customer4: Here I am</span>
+<span class="token comment">#&gt; 48.8559: Customer4: Waited:  0</span>
+<span class="token comment">#&gt; 55.3965: Customer4: Finished:  55.3964510986066</span>
+<span class="token comment">#&gt; 62.1037: Customer0: Finished:  62.1037152193123</span>
+<span class="token comment">#&gt; 62.1037: Customer2: Waited:  31.7026170465295</span>
+<span class="token comment">#&gt; 62.3885: Customer2: Finished:  62.3885266177193</span>
+<span class="token comment">#&gt; simmer environment: bank | now: 62.3885266177193 | next: </span>
+<span class="token comment">#&gt; { Monitor: in memory }</span>
+<span class="token comment">#&gt; { Resource: counter1 | monitored: TRUE | server status: 0(1) | queue status: 0(Inf) }</span>
+<span class="token comment">#&gt; { Resource: counter2 | monitored: TRUE | server status: 0(1) | queue status: 0(Inf) }</span>
+<span class="token comment">#&gt; { Source: Customer | monitored: 1 | n_generated: 5 }</span>
+bank <span class="token percent-operator operator">%&gt;%</span>
+  get_mon_arrivals<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token percent-operator operator">%&gt;%</span>
+  transform<span class="token punctuation">(</span>service_start_time <span class="token operator">=</span> end_time <span class="token operator">-</span> activity_time<span class="token punctuation">)</span> <span class="token percent-operator operator">%&gt;%</span>
+  .<span class="token punctuation">[</span>order<span class="token punctuation">(</span>.<span class="token operator">$</span>start_time<span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token punctuation">]</span>
+<span class="token comment">#&gt;        name start_time end_time activity_time finished replication</span>
+<span class="token comment">#&gt; 4 Customer0    0.00000 62.10372    62.1037152     TRUE           1</span>
+<span class="token comment">#&gt; 1 Customer1   23.71444 33.94103    10.2265939     TRUE           1</span>
+<span class="token comment">#&gt; 5 Customer2   30.40110 62.38853     0.2848114     TRUE           1</span>
+<span class="token comment">#&gt; 2 Customer3   32.41632 39.53020     5.5891677     TRUE           1</span>
+<span class="token comment">#&gt; 3 Customer4   48.85593 55.39645     6.5405163     TRUE           1</span>
+<span class="token comment">#&gt;   service_start_time</span>
+<span class="token comment">#&gt; 4            0.00000</span>
+<span class="token comment">#&gt; 1           23.71444</span>
+<span class="token comment">#&gt; 5           62.10372</span>
+<span class="token comment">#&gt; 2           33.94103</span>
+<span class="token comment">#&gt; 3           48.85593</span>
+bank <span class="token percent-operator operator">%&gt;%</span>
+  get_mon_resources<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token percent-operator operator">%&gt;%</span>
+  .<span class="token punctuation">[</span>order<span class="token punctuation">(</span>.<span class="token operator">$</span>time<span class="token punctuation">)</span><span class="token punctuation">,</span><span class="token punctuation">]</span>
+<span class="token comment">#&gt;    resource     time server queue capacity queue_size system limit replication</span>
+<span class="token comment">#&gt; 1  counter1  0.00000      1     0        1        Inf      1   Inf           1</span>
+<span class="token comment">#&gt; 2  counter2 23.71444      1     0       </span>
+
+ <span class="token number">1</span>        <span class="token number">Inf</span>      <span class="token number">1</span>   <span class="token number">Inf</span>           <span class="token number">1</span>
+<span class="token comment">#&gt; 3  counter1 30.40110      1     1        1        Inf      2   Inf           1</span>
+<span class="token comment">#&gt; 4  counter2 32.41632      1     1        1        Inf      2   Inf           1</span>
+<span class="token comment">#&gt; 5  counter2 33.94103      1     0        1        Inf      1   Inf           1</span>
+<span class="token comment">#&gt; 6  counter2 39.53020      0     0        1        Inf      0   Inf           1</span>
+<span class="token comment">#&gt; 7  counter2 48.85593      1     0        1        Inf      1   Inf           1</span>
+<span class="token comment">#&gt; 8  counter2 55.39645      0     0        1        Inf      0   Inf           1</span>
+<span class="token comment">#&gt; 9  counter1 62.10372      1     0        1        Inf      1   Inf           1</span>
+<span class="token comment">#&gt; 10 counter1 62.38853      0     0        1        Inf      0   Inf           1</span>
+</code></pre><p>Los resultados muestran que los clientes eligieron el mostrador con el número más pequeño. El desafortunado Customer2, que se une a la cola equivocada, tiene que esperar hasta que Customer0 termine en el tiempo 62.10372, y es el último en salir. Sin embargo, hay muy pocas llegadas en estas ejecuciones, limitadas a cinco clientes, para sacar conclusiones generales sobre las eficiencias relativas de los dos sistemas.</p>
+<h2 id="el-banco-con-un-monitor-también-conocido-como-estadísticas-resumidas">El banco con un monitor (también conocido como estadísticas resumidas) </h2>
+<p>Ahora demostramos cómo calcular los tiempos de espera promedio para nuestros clientes. En la versión original de SimPy de este tutorial, esto implicaba el uso de ‘Monitors’. En <code>simmer</code>, los datos son devueltos por la familia de funciones <code>get_mon_*</code>, como ya se ha demostrado. Aquí, simplemente resumimos el marco de datos devuelto por la función <code>get_mon_arrivals</code>, utilizando funciones estándar de R.</p>
+<p>También aumentamos el número de clientes a 50 (encuentre el número ‘49’ en el código).</p>
+<pre data-role="codeBlock" data-info="r" class="language-r r"><code>library<span class="token punctuation">(</span>simmer<span class="token punctuation">)</span>
+
+set.seed<span class="token punctuation">(</span><span class="token number">100005</span><span class="token punctuation">)</span>
+
+customer <span class="token operator">&lt;-</span>
+  trajectory<span class="token punctuation">(</span><span class="token string">"Customer's path"</span><span class="token punctuation">)</span> <span class="token percent-operator operator">%&gt;%</span>
+  seize<span class="token punctuation">(</span><span class="token string">"counter"</span><span class="token punctuation">)</span> <span class="token percent-operator operator">%&gt;%</span>
+  timeout<span class="token punctuation">(</span><span class="token keyword keyword-function">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>rexp<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token operator">/</span><span class="token number">12</span><span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token punctuation">)</span> <span class="token percent-operator operator">%&gt;%</span>
+  release<span class="token punctuation">(</span><span class="token string">"counter"</span><span class="token punctuation">)</span>
+
+bank <span class="token operator">&lt;-</span>
+  simmer<span class="token punctuation">(</span><span class="token string">"bank"</span><span class="token punctuation">)</span> <span class="token percent-operator operator">%&gt;%</span>
+  add_resource<span class="token punctuation">(</span><span class="token string">"counter"</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span> <span class="token percent-operator operator">%&gt;%</span>
+  add_generator<span class="token punctuation">(</span><span class="token string">"Customer"</span><span class="token punctuation">,</span> customer<span class="token punctuation">,</span> <span class="token keyword keyword-function">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>c<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> rexp<span class="token punctuation">(</span><span class="token number">49</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token operator">/</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+bank <span class="token percent-operator operator">%&gt;%</span> run<span class="token punctuation">(</span>until <span class="token operator">=</span> <span class="token number">1000</span><span class="token punctuation">)</span>
+<span class="token comment">#&gt; simmer environment: bank | now: 650.615510598544 | next: </span>
+<span class="token comment">#&gt; { Monitor: in memory }</span>
+<span class="token comment">#&gt; { Resource: counter | monitored: TRUE | server status: 0(2) | queue status: 0(Inf) }</span>
+<span class="token comment">#&gt; { Source: Customer | monitored: 1 | n_generated: 50 }</span>
+
+result <span class="token operator">&lt;-</span>
+  bank <span class="token percent-operator operator">%&gt;%</span>
+  get_mon_arrivals<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token percent-operator operator">%&gt;%</span>
+  transform<span class="token punctuation">(</span>waiting_time <span class="token operator">=</span> end_time <span class="token operator">-</span> start_time <span class="token operator">-</span> activity_time<span class="token punctuation">)</span>
+</code></pre><p>El tiempo de espera promedio para 50 clientes en este sistema de 2 mostradores es más confiable (es decir, menos sujeto a efectos de simulación aleatoria) que los tiempos que medimos antes, pero aún no es suficientemente confiable para decisiones del mundo real. También deberíamos replicar las ejecuciones utilizando diferentes semillas de números aleatorios. El resultado de esta ejecución es:</p>
+<pre data-role="codeBlock" data-info="r" class="language-r r"><code>paste<span class="token punctuation">(</span><span class="token string">"Average wait for "</span><span class="token punctuation">,</span> sum<span class="token punctuation">(</span>result<span class="token operator">$</span>finished<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token string">" completions was "</span><span class="token punctuation">,</span>
+      mean<span class="token punctuation">(</span>result<span class="token operator">$</span>waiting_time<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token string">"minutes."</span><span class="token punctuation">)</span>
+<span class="token comment">#&gt; [1] "Average wait for  50  completions was  3.05085138406832 minutes."</span>
+</code></pre><h2 id="múltiples-ejecuciones">Múltiples ejecuciones </h2>
+<p>Para obtener una cantidad de mediciones independientes, debemos replicar las ejecuciones utilizando diferentes semillas de números aleatorios. Cada replicación debe ser independiente de las anteriores, por lo que el entorno (banco) debe redefinirse para cada ejecución, de modo que los tiempos de interarribo aleatorios en la función <code>add_generator</code> se generen desde cero.</p>
+<p>Tomamos los bloques de código que construyen el entorno (banco) y ejecutan la simulación, y los envolvemos en la función <code>mclapply</code> del paquete <code>parallel</code>. Esta función ejecuta cada simulación en paralelo, utilizando los núcleos disponibles en el procesador de la computadora. Debido a que usamos semillas para la reproducibilidad, las pasamos a la función que ejecuta la simulación (function(the_seed)).</p>
+<pre data-role="codeBlock" data-info="r" class="language-r r"><code>library<span class="token punctuation">(</span>simmer<span class="token punctuation">)</span>
+library<span class="token punctuation">(</span>parallel<span class="token punctuation">)</span>
+
+customer <span class="token operator">&lt;-</span>
+  trajectory<span class="token punctuation">(</span><span class="token string">"Customer's path"</span><span class="token punctuation">)</span> <span class="token percent-operator operator">%&gt;%</span>
+  seize<span class="token punctuation">(</span><span class="token string">"counter"</span><span class="token punctuation">)</span> <span class="token percent-operator operator">%&gt;%</span>
+  timeout<span class="token punctuation">(</span><span class="token keyword keyword-function">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>rexp<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token operator">/</span><span class="token number">12</span><span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token punctuation">)</span> <span class="token percent-operator operator">%&gt;%</span>
+  release<span class="token punctuation">(</span><span class="token string">"counter"</span><span class="token punctuation">)</span>
+
+mclapply<span class="token punctuation">(</span>c<span class="token punctuation">(</span><span class="token number">393943</span><span class="token punctuation">,</span> <span class="token number">100005</span><span class="token punctuation">,</span> <span class="token number">777999555</span><span class="token punctuation">,</span> <span class="token number">319999772</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token keyword keyword-function">function</span><span class="token punctuation">(</span>the_seed<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  set.seed<span class="token punctuation">(</span>the_seed<span class="token punctuation">)</span>
+
+  bank <span class="token operator">&lt;-</span>
+    simmer<span class="token punctuation">(</span><span class="token string">"bank"</span><span class="token punctuation">)</span> <span class="token percent-operator operator">%&gt;%</span>
+    add_resource<span class="token punctuation">(</span><span class="token string">"counter"</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span> <span class="token percent-operator operator">%&gt;%</span>
+    add_generator<span class="token punctuation">(</span><span class="token string">"Customer"</span><span class="token punctuation">,</span> customer<span class="token punctuation">,</span> <span class="token keyword keyword-function">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>c<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> rexp<span class="token punctuation">(</span><span class="token number">49</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token operator">/</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+  bank <span class="token percent-operator operator">%&gt;%</span> run<span class="token punctuation">(</span>until <span class="token operator">=</span> <span class="token number">400</span><span class="token punctuation">)</span>
+  result <span class="token operator">&lt;-</span>
+    bank <span class="token percent-operator operator">%&gt;%</span>
+    get_mon_arrivals<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token percent-operator operator">%&gt;%</span>
+    transform<span class="token punctuation">(</span>waiting_time <span class="token operator">=</span> end_time <span class="token operator">-</span> start_time <span class="token operator">-</span> activity_time<span class="token punctuation">)</span>
+  paste<span class="token punctuation">(</span><span class="token string">"Average wait for "</span><span class="token punctuation">,</span> sum<span class="token punctuation">(</span>result<span class="token operator">$</span>finished<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token string">" completions was "</span><span class="token punctuation">,</span>
+        mean<span class="token punctuation">(</span>result<span class="token operator">$</span>waiting_time<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token string">"minutes."</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span> <span class="token percent-operator operator">%&gt;%</span> unlist<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token comment">#&gt; [1] "Average wait for  49  completions was  3.4958501806687 minutes."  </span>
+<span class="token comment">#&gt; [2] "Average wait for  29  completions was  0.584941574937737 minutes."</span>
+<span class="token comment">#&gt; [3] "Average wait for  32  completions was  1.00343842138177 minutes." </span>
+<span class="token comment">#&gt; [4] "Average wait for  42  completions was  7.41231393636088 minutes."</span>
+</code></pre><p>Los resultados muestran algo de variación. Recuerde, sin embargo, que el sistema aún solo está operando para 50 clientes, por lo que el sistema puede no estar en estado estacionario.</p>
+
+      </div>
+      
+      
+    
+    
+    
+    
+    
+    
+  
+    </body></html>
